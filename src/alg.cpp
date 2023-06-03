@@ -1,7 +1,8 @@
 // Copyright 2021 NNTU-CS
 #include  <cstdlib>
+#include  <fstream>
 #include  "bst.h"
-#include  <fstream> 
+
 BST<std::string> makeTree(const char* filename) {
     BST<std::string> bst;
     std::ifstream file(filename);
