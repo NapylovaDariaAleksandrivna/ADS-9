@@ -1,6 +1,7 @@
 // Copyright 2021 NNTU-CS
 #include  <cstdlib>
 #include  "bst.h"
+#include  <fstream> 
 BST<std::string> makeTree(const char* filename) {
     BST<std::string> bst;
     std::ifstream file(filename);
@@ -21,7 +22,7 @@ BST<std::string> makeTree(const char* filename) {
             output.clear();
         }
     }
-    bst.add(output);
+    bst.addVal(output);
     file.close();
     return bst;
 }
