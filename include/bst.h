@@ -27,19 +27,19 @@ class BST {
          }
          return root;
     }
-    int depthSearch(Node* root) {
+    int depth(Node* root) {
         if (!root) {
             return 0;
         }
-        return 1 + std::max(depthSearch(root->left), depthSearch(root->right));
+        return 1 + std::max(depth(root->left), depth(root->right));
     }
 
  public:
     void addVal(T value) {
         root = addNode(root, value);
     }
-    int depthSearch() {
-        return depthSearch(root) - 1;
+    int depth() {
+        return depth(root) - 1;
     }
     int search(const T& value) {
         Node* copy = root;
