@@ -57,5 +57,3 @@ class BST {
     BST() : root(nullptr) {}
     BST<std::string> createTree(const char* filename);
 };
-#endif 
-// INCLUDE_BST_H_
